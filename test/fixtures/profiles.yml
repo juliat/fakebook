@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  birthday: 2013-03-24
+  female: false
+  college_id: 1
+  website: MyString
+  political_views_id: 1
+
+two:
+  user_id: 1
+  birthday: 2013-03-24
+  female: false
+  college_id: 1
+  website: MyString
+  political_views_id: 1

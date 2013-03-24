@@ -1,0 +1,33 @@
+<h1>Listing profiles</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Birthday</th>
+    <th>Female</th>
+    <th>College</th>
+    <th>Website</th>
+    <th>Political views</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profiles.each do |profile| %>
+  <tr>
+    <td><%= profile.user_id %></td>
+    <td><%= profile.birthday %></td>
+    <td><%= profile.female %></td>
+    <td><%= profile.college_id %></td>
+    <td><%= profile.website %></td>
+    <td><%= profile.political_views_id %></td>
+    <td><%= link_to 'Show', profile %></td>
+    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profile', new_profile_path %>
