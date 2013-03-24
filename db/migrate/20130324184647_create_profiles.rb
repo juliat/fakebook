@@ -6,7 +6,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :female
       t.integer :college_id
       t.string :website
-      t.integer :political_views_id
+      t.integer :political_view_id
 
       t.timestamps
     end
