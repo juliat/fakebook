@@ -1,5 +1,8 @@
 Fakebook::Application.routes.draw do
 
+  resources :political_views
+
+
   resources :polical_views
 
 
