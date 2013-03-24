@@ -1,6 +1,6 @@
-class CreatePoliticalViews < ActiveRecord::Migration
+class Interest < ActiveRecord::Migration
   def change
-    create_table :political_views do |t|
+    create_table :interest do |t|
       t.integer :id
       t.string :name
       

@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= collection_select(:profile, :user_id, User.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :birthday %><br />
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :political_view_id %><br />
-    <%= f.number_field :political_view_id %>
+    <%= collection_select(:profile, :political_view_id, PoliticalView.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,6 +1,6 @@
 class PoliticalView < ActiveRecord::Base
-  attr_accessible :id, :name, :profile_id
+  attr_accessible :id, :name
 
   #Relationships
-  belongs_to :profile
+  has_many :profiles
 end

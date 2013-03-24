@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Id</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -11,7 +10,6 @@
 
 <% @political_views.each do |political_view| %>
   <tr>
-    <td><%= political_view.id %></td>
     <td><%= political_view.name %></td>
     <td><%= link_to 'Show', political_view %></td>
     <td><%= link_to 'Edit', edit_political_view_path(political_view) %></td>

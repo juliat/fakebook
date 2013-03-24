@@ -11,11 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324193642) do
+ActiveRecord::Schema.define(:version => 20130324202554) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
     t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "interest", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -26,15 +32,23 @@ ActiveRecord::Schema.define(:version => 20130324193642) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "profile_interests", :force => true do |t|
+    t.integer  "profile_id"
+    t.integer  "interest_id"
+    t.date     "date"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
     t.date     "birthday"
     t.boolean  "female"
     t.integer  "college_id"
     t.string   "website"
-    t.integer  "political_views_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "political_view_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "users", :force => true do |t|
