@@ -1,5 +1,8 @@
 Fakebook::Application.routes.draw do
 
+  resources :polical_views
+
+
   resources :profiles
   
   resources :colleges

@@ -1,0 +1,25 @@
+<%= form_for(@polical_view) do |f| %>
+  <% if @polical_view.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@polical_view.errors.count, "error") %> prohibited this polical_view from being saved:</h2>
+
+      <ul>
+      <% @polical_view.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
