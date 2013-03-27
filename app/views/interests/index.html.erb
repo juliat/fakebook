@@ -1,5 +1,23 @@
-<ul>
-	<% @interests.each do |interest| %>
-		<li><%= interest.name %></li>
-	<% end %>
-</ul>
+<h1>Listing interests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @interests.each do |interest| %>
+  <tr>
+    <td><%= interest.name %></td>
+    <td><%= link_to 'Show', interest %></td>
+    <td><%= link_to 'Edit', edit_interest_path(interest) %></td>
+    <td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interest', new_interest_path %>
