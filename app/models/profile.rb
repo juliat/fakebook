@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :birthday, :college_id, :female, :political_view_id, :user_id, :website, :user
+  attr_accessible :birthday, :college_id, :female, :political_view_id, :user_id, :website, :user, :interests
 
   # Relationships
   belongs_to :political_view

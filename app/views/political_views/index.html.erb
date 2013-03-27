@@ -2,22 +2,20 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th></th>
+    <th>View</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @political_views.each do |political_view| %>
   <tr>
-    <td><%= political_view.name %></td>
-    <td><%= link_to 'Show', political_view %></td>
+    <td><%= link_to political_view.name, political_view %></td>
     <td><%= link_to 'Edit', edit_political_view_path(political_view) %></td>
-    <td><%= link_to 'Destroy', political_view, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', political_view, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Political view', new_political_view_path %>
+<%= link_to 'New Political View', new_political_view_path %>

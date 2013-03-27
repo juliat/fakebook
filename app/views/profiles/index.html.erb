@@ -10,20 +10,18 @@
     <th>Political views</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @profiles.each do |profile| %>
   <tr>
-    <td><%= profile.user.name %></td>
+    <td><%= link_to profile.user.name, profile %></td>
     <td><%= profile.birthday %></td>
     <td><%= profile.female %></td>
     <td><%= profile.college.name %></td>
     <td><%= profile.website %></td>
     <td><%= profile.political_view.name %></td>
-    <td><%= link_to 'Show', profile %></td>
     <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

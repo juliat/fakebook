@@ -4,8 +4,13 @@ body {
   font-family: helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
+}
+
+#content{
+  width: 70%;
+  margin: 0 auto;
 }
 
 p, ol, ul, td {
@@ -21,13 +26,11 @@ pre {
 }
 
 a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
+  color: #3b5998;
+  text-decoration: none;
+  font-weight: bold;
   &:hover {
-    color: #fff;
-    background-color: #000;
+    text-decoration: underline;
   }
 }
 

@@ -1,19 +1,17 @@
-<h1>Listing interests</h1>
+<h1>Interests</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th></th>
+    <th>Interest</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @interests.each do |interest| %>
   <tr>
-    <td><%= interest.name %></td>
-    <td><%= link_to 'Show', interest %></td>
+    <td><%= link_to interest.name, interest %></td>
     <td><%= link_to 'Edit', edit_interest_path(interest) %></td>
-    <td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

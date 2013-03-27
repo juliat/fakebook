@@ -2,20 +2,18 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>College</th>
     <th>Location</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @colleges.each do |college| %>
   <tr>
-    <td><%= college.name %></td>
+    <td><%= link_to college.name, college %></td>
     <td><%= college.location %></td>
-    <td><%= link_to 'Show', college %></td>
     <td><%= link_to 'Edit', edit_college_path(college) %></td>
-    <td><%= link_to 'Destroy', college, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', college, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
