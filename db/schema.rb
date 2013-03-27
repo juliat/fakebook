@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20130324202554) do
     t.boolean  "female"
     t.integer  "college_id"
     t.string   "website"
-    t.integer  "political_views_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "political_view_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "users", :force => true do |t|

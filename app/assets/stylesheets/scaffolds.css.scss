@@ -4,6 +4,8 @@ body {
   font-family: helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  margin: 0px;
+  padding: 0px;
 }
 
 p, ol, ul, td {
@@ -66,4 +68,12 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+th{
+  text-align: left;
+}
+
+td{
+  padding-right: 10px;
 }

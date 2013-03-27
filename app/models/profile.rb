@@ -1,8 +1,10 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :birthday, :college_id, :female, :political_view_id, :user_id, :website
+  attr_accessible :birthday, :college_id, :female, :political_view_id, :user_id, :website, :user
 
   # Relationships
   belongs_to :political_view
-  has_many :profile_interests
+  belongs_to :user
+  belongs_to :college
+  belongs_to :profile_interests
   has_many :interests, :through => :profile_interests
 end

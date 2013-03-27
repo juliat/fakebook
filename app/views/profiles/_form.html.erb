@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :college_id %><br />
-    <%= f.number_field :college_id %>
+    <%= collection_select(:profile, :college_id, College.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :website %><br />
