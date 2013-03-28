@@ -1,9 +1,19 @@
-<h1>Users</h1>
+<h1>Listing users</h1>
 
 <table>
   <tr>
-    <th>User</th>
+    <th>Username</th>
     <th>Email</th>
+    <th>Crypted password</th>
+    <th>Password salt</th>
+    <th>Persistence token</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Date of birth</th>
+    <th>Gender</th>
+    <th>Interests</th>
+    <th>Political affiliation</th>
+    <th>Religion</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,10 +21,21 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= link_to user.name, user %></td>
+    <td><%= user.username %></td>
     <td><%= user.email %></td>
+    <td><%= user.crypted_password %></td>
+    <td><%= user.password_salt %></td>
+    <td><%= user.persistence_token %></td>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.date_of_birth %></td>
+    <td><%= user.gender %></td>
+    <td><%= user.interests %></td>
+    <td><%= user.political_affiliation %></td>
+    <td><%= user.religion %></td>
+    <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

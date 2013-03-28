@@ -12,12 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :political_affiliation %><br />
+    <%= f.text_field :political_affiliation %>
+  </div>
+  <div class="field">
+    <%= f.label :religion %><br />
+    <%= f.text_field :religion %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,11 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  id: 1
-  name: MyString
+  username: MyString
   email: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2013-03-27
+  gender: MyString
+  interests: MyText
+  political_affiliation: MyString
+  religion: MyString
 
 two:
-  id: 1
-  name: MyString
+  username: MyString
   email: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2013-03-27
+  gender: MyString
+  interests: MyText
+  political_affiliation: MyString
+  religion: MyString

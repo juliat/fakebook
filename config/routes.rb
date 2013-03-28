@@ -1,11 +1,11 @@
 Fakebook::Application.routes.draw do
+  resources :friendships
 
-  resources :political_views
-  resources :polical_views
-  resources :profiles
-  resources :colleges
+
+  resources :posts
+
+
   resources :users
-  resources :interests
 
 
   # The priority is based upon order of creation:
