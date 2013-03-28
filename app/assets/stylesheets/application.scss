@@ -57,6 +57,17 @@
  	}
  }
 
+ #logo{
+ 	float: left;
+ 	height: 44px;
+ 	width: 121px;
+ 	background: #3b5998 url('logo.png') center no-repeat;
+ 	margin-left: -6px;
+ }
+
+#logo:hover{
+	background: #4b67a1 url('logo.png') center no-repeat;
+}
  .clear {
  	clear: both;
  }
