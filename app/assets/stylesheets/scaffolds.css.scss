@@ -1,13 +1,19 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  margin: 0 auto;
+}
+
+#content{
+  width: 70%;
+  margin: 0 auto;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -19,13 +25,11 @@ pre {
 }
 
 a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
+  color: #3b5998;
+  text-decoration: none;
+  font-weight: bold;
   &:hover {
-    color: #fff;
-    background-color: #000;
+    text-decoration: underline;
   }
 }
 
@@ -66,4 +70,9 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+th, td{
+  text-align: left;
+  padding-right: 20px;
 }
