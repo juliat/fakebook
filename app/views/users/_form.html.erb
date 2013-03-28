@@ -29,19 +29,19 @@
   </div>
   <div class="field">
     <%= f.label :date_of_birth %><br />
-    <%= f.date_select :date_of_birth %>
+    <%= f.date_select :date_of_birth, :order => [:month, :day, :year], :start_year => 1950 %>
   </div>
   <div class="field">
     <%= f.label :gender %><br />
     <%= f.text_field :gender %>
   </div>
   <div class="field">
-    <%= f.label :political_affiliation %><br />
-    <%= f.text_field :political_affiliation %>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :religion %><br />
-    <%= f.text_field :religion %>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit %>
