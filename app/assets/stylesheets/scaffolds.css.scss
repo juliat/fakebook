@@ -116,6 +116,7 @@ th, td{
   float: left;
   height: 96px;
   width: 550px;
+  margin-bottom: 20px;
   overflow: visible;
 }
 
@@ -215,11 +216,42 @@ table, tbody{
   padding-right: 40px;
 }
 
+.signupinfo{
+  width: 215px;
+}
+
 #signupform td:last-child{
   padding-right: 0px;
 }
 
-#signupsubmit.actions > input{
+#signupsubmit.actions > input, #newsignin > .actions > input, #new-post-submit > .actions > input{
+-webkit-appearance: none;
+    height: 50px;
+    width: 200px;
+    background-color:#3b5998;
+    color:#fff;
+    border-radius: 3px;
+    font-weight:bold;
+    border: none;
+    border-top: 1px solid #99B3E8;
+    border-bottom: 1px solid #2A457D;
+    font-size: 14px;
+}
+
+#new-post-submit > .actions > input {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+}
+
+#signupsubmit.actions > input:hover, #newsignin > .actions > input:hover, #new-post-submit > .actions > input:hover{
+  box-shadow: 0px 0px 10px #3b5998;
+  cursor: pointer;
+}
+
+#signupsubmit.actions > input:active, #newsignin > .actions > input:active, #new-post-submit > .actions > input:active{
+  background-color: #2A457D;
+  color: #999;
 }
 
 #signupform{
@@ -242,7 +274,7 @@ td#delete{
 }
 
 #welcome-text > h1{
-  font-size: 30px;
+  font-size: 28px;
   line-height: 150%;
 }
 
@@ -253,3 +285,18 @@ input#user-photo{
 table#post-text > tbody > tr > td{
   font-weight: normal;
 }
+
+td.photo-upload{
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+#newsignin{
+  padding-top: 50px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#newsignin > .field > input{
+  width: 195px;
+} 

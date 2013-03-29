@@ -13,7 +13,7 @@
 <table id="signupform">
   <tbody>
     <tr id="signup">
-      <td>
+      <td class="signupinfo">
         <div class="field">
           <%= f.label :first_name %><br />
           <%= f.text_field :first_name %>
@@ -23,12 +23,12 @@
           <%= f.text_field :last_name %>
         </div>
         <div class="field">
-          <%= f.label :email %><br />
-          <%= f.text_field :email %>
-        </div>
-        <div class="field">
           <%= f.label :username %><br />
           <%= f.text_field :username %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.text_field :email %>
         </div>
         <div class="field">
           <%= f.label :password %><br />
@@ -44,10 +44,10 @@
         </div>
         <div class="field">
           <%= f.label :gender %>
-          <%= f.select :gender, options_for_select(['male', 'female']), :prompt => "Select"  %><br /><br />
+          <%= f.select :gender, options_for_select(['Male', 'Female']), :prompt => "Select"  %><br /><br />
         </div>
       </td>
-      <td>
+      <td class="photo-upload">
         <div class="field">
           <%= f.label :photo %><br />
           <%= f.file_field :photo %>
