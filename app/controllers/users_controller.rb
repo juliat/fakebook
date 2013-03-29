@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     end
     
     @user = User.find(params[:id])
+    @posts = @user.get_posts
 
     # Create an empty friend request
     @friendRequest = FriendRequest.new

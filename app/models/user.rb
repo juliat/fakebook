@@ -45,4 +45,8 @@ class User < ActiveRecord::Base
     postsArray.sort_by! {|p| p.timestamp }.reverse
   end
 
+  def get_posts
+    self.posts.reverse
+  end
+
 end
