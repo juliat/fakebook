@@ -12,7 +12,15 @@
   <% end %>
 
 <div id="new-post">
-  <a href="#"><div id="new-post-photo"></div></a>
+  <a href="#">
+    <div id="new-post-photo">
+      <% if current_user.photo_url.nil? %>
+        <img src="http://placehold.it/56x56"/>
+      <% else %>
+        <%= image_tag current_user.photo_url %>
+      <% end %>
+    </div>
+  </a>
   <div id="new-post-text">
     <div class="field">
       <%= f.text_area :content, :placeholder => "What's on your mind?" %>

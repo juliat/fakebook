@@ -11,7 +11,17 @@
 
 <% @posts.each do |post| %>
   <tr id="post-row">
-    <td id="post-photo"><a href="#"><div id="new-post-photo"></div></a></td>
+    <td id="post-photo">
+      <a href="#">
+        <div id="new-post-photo">
+          <% if post.user.photo_url.nil? %>
+            <img src="http://placehold.it/56x56"/>
+          <% else %>
+            <%= image_tag post.user.photo_url %>
+          <% end %>
+        </div>
+      </a>
+    </td>
     <td id="post-text-container">
       <table id="post-text">
         <tr>

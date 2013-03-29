@@ -36,8 +36,10 @@ class User < ActiveRecord::Base
     friendsArray = get_friends
 
     for friend in friendsArray
-      postsArray = friend.posts
+      postsArray += friend.posts
     end
+
+    postsArray += self.posts
 
     # Sort the posts
     postsArray.sort_by! {|p| p.timestamp }
