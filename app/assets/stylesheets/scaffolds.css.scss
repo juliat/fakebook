@@ -23,7 +23,9 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
-#post-photo img, #new-post-photo img, .person img{
+#post-photo img, 
+#new-post-photo img, 
+.person img{
   border-radius: 3px;
 }
 
@@ -155,12 +157,15 @@ th, td{
   font-size: 11px;
 }
 
-#post-photo, #post-text-container, #timestamp{
+#post-photo, 
+#post-text-container, 
+#timestamp{
   padding-right: 0px;
   vertical-align: top;
 }
 
-#post-text, #post-text-container{
+#post-text, 
+#post-text-container{
   position: relative;
   width: 550px;
   border: 1px solid #ddd;
@@ -224,7 +229,9 @@ table, tbody{
   padding-right: 0px;
 }
 
-#signupsubmit.actions > input, #newsignin > .actions > input, #new-post-submit > .actions > input{
+#signupsubmit.actions > input, 
+#newsignin > .actions > input, 
+#new-post-submit > .actions > input{
 -webkit-appearance: none;
     height: 50px;
     width: 200px;
@@ -244,12 +251,16 @@ table, tbody{
   font-size: 12px;
 }
 
-#signupsubmit.actions > input:hover, #newsignin > .actions > input:hover, #new-post-submit > .actions > input:hover{
+#signupsubmit.actions > input:hover, 
+#newsignin > .actions > input:hover, 
+#new-post-submit > .actions > input:hover{
   box-shadow: 0px 0px 10px #3b5998;
   cursor: pointer;
 }
 
-#signupsubmit.actions > input:active, #newsignin > .actions > input:active, #new-post-submit > .actions > input:active{
+#signupsubmit.actions > input:active, 
+#newsignin > .actions > input:active, 
+#new-post-submit > .actions > input:active{
   background-color: #2A457D;
   color: #999;
 }
