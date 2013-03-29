@@ -2,7 +2,17 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    # Check if user is not authenticated
+    if current_user.nil?
+      redirect_to :controller => 'users', :action => "new"
+      return
+    end
+
+    # Fetch user's newsfeed
     @posts = Post.all
+
+    # Create an empty post
+    @newPost = Post.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,61 +20,23 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
-    @post = Post.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
-    end
-  end
-
-  # GET /posts/new
-  # GET /posts/new.json
-  def new
-    @post = Post.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @post }
-    end
-  end
-
-  # GET /posts/1/edit
-  def edit
-    @post = Post.find(params[:id])
-  end
-
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @newPost = Post.new(params[:post])
+    @newPost.user = current_user
+    @newPost.timestamp = Time.now
+
+    # Fetch the user's newsfeed again
+    @posts = current_user.newsfeed
 
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
+      if @newPost.save
+        format.html { redirect_to :controller => 'posts' }
+        format.json { render json: @newPost, status: :created, location: @newPost }
       else
-        format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /posts/1
-  # PUT /posts/1.json
-  def update
-    @post = Post.find(params[:id])
-
-    respond_to do |format|
-      if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { render action: "index" }
+        format.json { render json: @newPost.errors, status: :unprocessable_entity }
       end
     end
   end

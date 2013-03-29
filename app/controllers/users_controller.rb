@@ -2,6 +2,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    # Check if user is not authenticated
+    if current_user.nil?
+      redirect_to :controller => 'users', :action => "new"
+      return
+    end
+
     @users = User.all
 
     respond_to do |format|
@@ -13,6 +19,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    # Check if user is not authenticated
+    if current_user.nil?
+      redirect_to :controller => 'users', :action => "new"
+      return
+    end
+    
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -44,7 +56,7 @@ class UsersController < ApplicationController
  
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(:users, :notice => 'Registration successfull.') }
+        format.html { redirect_to(:posts) }
         format.json  { render :json => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -66,18 +78,6 @@ class UsersController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /users/1
-  # DELETE /users/1.json
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to users_url }
-      format.json { head :no_content }
     end
   end
 end

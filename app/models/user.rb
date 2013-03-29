@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :crypted_password, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
+  attr_accessible :crypted_password, :friends, :friendships, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
   acts_as_authentic
   serialize :interests, Array
 
@@ -24,4 +24,10 @@ class User < ActiveRecord::Base
     return nil if date_of_birth.blank?
     (Time.now.to_s(:number).to_i - date_of_birth.to_time.to_s(:number).to_i)/10e9.to_i
   end
+
+  def newsfeed
+    feed = []
+    # to be continued
+  end
+
 end

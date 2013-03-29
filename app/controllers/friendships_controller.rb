@@ -2,39 +2,18 @@ class FriendshipsController < ApplicationController
   # GET /friendships
   # GET /friendships.json
   def index
-    @friendships = Friendship.all
+    # Check if user is not authenticated
+    if current_user.nil?
+      redirect_to :controller => 'users', :action => "new"
+      return
+    end
+    
+    @friendships = current_user.friendships.where(:accepted == true)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @friendships }
     end
-  end
-
-  # GET /friendships/1
-  # GET /friendships/1.json
-  def show
-    @friendship = Friendship.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @friendship }
-    end
-  end
-
-  # GET /friendships/new
-  # GET /friendships/new.json
-  def new
-    @friendship = Friendship.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @friendship }
-    end
-  end
-
-  # GET /friendships/1/edit
-  def edit
-    @friendship = Friendship.find(params[:id])
   end
 
   # POST /friendships

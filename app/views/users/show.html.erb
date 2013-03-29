@@ -1,3 +1,5 @@
+<!-- THIS WILL BE THE PROFILE PAGE -->
+
 <p id="notice"><%= notice %></p>
 
 <h1>
@@ -12,21 +14,6 @@
 <p>
   <b>Email:</b>
   <%= @user.email %>
-</p>
-
-<p>
-  <b>Crypted password:</b>
-  <%= @user.crypted_password %>
-</p>
-
-<p>
-  <b>Password salt:</b>
-  <%= @user.password_salt %>
-</p>
-
-<p>
-  <b>Persistence token:</b>
-  <%= @user.persistence_token %>
 </p>
 
 <p>
@@ -64,6 +51,7 @@
   <%= @user.religion %>
 </p>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if @user == current_user %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>
