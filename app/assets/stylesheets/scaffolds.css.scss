@@ -213,18 +213,14 @@ table, tbody{
     font-family: helvetica, sans-serif;
 }
 
-#signup > td{
-  vertical-align: top;
-}
-
-#signupform td{
-  padding-right: 40px;
+#signupform{
+  overflow: auto;
+  padding: 10px;
 }
 
 .signupinfo, .photo-upload{
   width: 215px;
   float: left;
-  margin-right: 20px;
 }
 
 #signupform td:last-child{
@@ -335,10 +331,28 @@ td.photo-upload{
   width: 195px;
 } 
 
+div.welcome-div{
+  overflow: auto;
+  padding: 20px 20px;
+  margin-top: 120px;
+}
+
 div.welcome-div > a{
   float:left;
 }
 
 .welcome-div > a:hover{
   background: none;
+}
+
+.left, .right{
+  width: 430px;
+  overflow: visible;
+}
+
+.left{float: left; padding-right: 20px; border-right: 1px solid #ccc;}
+.right{float:right}
+
+#links{
+  float: left;
 }
