@@ -82,6 +82,13 @@ ul.col{
   width: 250px;
   line-height: 25px;
 
+  li{
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   label{
     color: #908B8B;
     display: inline-block;
