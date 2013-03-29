@@ -27,3 +27,38 @@ form#new_friend_request{
 
   }
 }
+
+.friend_requests {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.request {
+  width: 270px;
+  height: 88px;
+  float: left;
+  margin-top: 25px;
+  margin-right: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.request img {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+}
+
+.name {
+  float: left;
+  min-width: 150px;
+  font-size: 12pt;
+  margin-top: 17px;
+}
+
+.accept, .reject {
+  float: left;
+  min-width: 70px;
+  margin-top: 7px;
+  color: grey;
+}

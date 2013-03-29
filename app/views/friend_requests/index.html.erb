@@ -1,21 +1,23 @@
 <!-- THIS WILL BE THE FRIEND REQUEST PAGE -->
 
-<h1>Listing friend_requests</h1>
+<h1>Friend Requests</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<hr>
 
-<% for friend_request in @friend_requests %>
-  <tr>
-    <td><%= link_to "#{friend_request.from.name}", user_path(friend_request.from) %></td>
-    <td><%= link_to 'Accept', friend_request, method: :accept %></td>
-    <td><%= link_to 'Reject', friend_request, method: :reject, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="friend_requests">
+  <% for friend_request in @friend_requests %>
+  <div class="request">
+    <% if friend_request.from.photo_url.nil? %>
+      <img src="http://placehold.it/75x75"/>
+    <% else %>
+      <%= image_tag friend_request.from.photo_url %>
+    <% end %>
+    <div class="name"><%= link_to "#{friend_request.from.name}", user_path(friend_request.from) %></div>
+    <div class="accept"><%= link_to 'Accept', friend_request, method: :accept %></div>
+    <div class="reject"><%= link_to 'Reject', friend_request, method: :reject, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+  <% end %>
+
+</div>
 
 <br />

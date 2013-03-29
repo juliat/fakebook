@@ -1,3 +1,26 @@
 // Place all the styles related to the friendships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.person {
+  width: 270px;
+  height: 88px;
+  float: left;
+  margin-top: 25px;
+  margin-right: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.person img {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+}
+
+.name {
+  float: left;
+  min-width: 150px;
+  font-size: 12pt;
+  margin-top: 17px;
+}

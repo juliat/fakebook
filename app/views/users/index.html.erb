@@ -1,17 +1,19 @@
 <!-- THIS WILL BE THE ALL PEOPLE PAGE -->
 
-<h1>Listing all users</h1>
+<h1>All People</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<div class="people">
+  <% for user in @users %>
+  <div class="person">
+    <% if user.photo_url.nil? %>
+      <img src="http://placehold.it/75x75"/>
+    <% else %>
+      <%= image_tag user.photo_url %>
+    <% end %>
+    <div class="name"><%= link_to "#{user.name}", user_path(user) %></div>
+  </div>
+  <% end %>
 
-<% for user in @users %>
-  <tr>
-    <td><%= link_to "#{user.name}", user_path(user) %></td>
-  </tr>
-<% end %>
-</table>
+</div>
 
 <br />

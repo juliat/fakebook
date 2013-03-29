@@ -32,10 +32,6 @@
     <%= f.date_select :date_of_birth, :order => [:month, :day, :year], :start_year => 1950 %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
     <%= f.label :gender %>
     <%= f.select :gender, options_for_select(['male', 'female']), :prompt => "Select"  %><br /><br />
   </div>

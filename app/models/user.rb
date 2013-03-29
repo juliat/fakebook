@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
     postsArray += self.posts
 
     # Sort the posts
-    postsArray.sort_by! {|p| p.timestamp }
+    postsArray.sort_by! {|p| p.timestamp }.reverse
   end
 
 end
