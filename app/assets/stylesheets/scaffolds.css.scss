@@ -207,3 +207,25 @@ table, tbody{
     font-size: 15px;
     font-family: helvetica, sans-serif;
 }
+
+#signup > td{
+  vertical-align: top;
+}
+
+#signupform td{
+  padding-right: 40px;
+}
+
+#signupform td:last-child{
+  padding-right: 0px;
+}
+
+#signupsubmit.actions > input{
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+}
+
+#signupform{
+  width: 100%;
+}
