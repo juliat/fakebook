@@ -14,54 +14,58 @@
   <tbody>
     <tr id="signup">
       <td>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-    <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-</td>
-<td>
-  <div class="field">
-    <%= f.label :date_of_birth %><br />
-    <%= f.date_select :date_of_birth, :order => [:month, :day, :year], :start_year => 1950 %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %>
-    <%= f.select :gender, options_for_select(['male', 'female']), :prompt => "Select"  %><br /><br />
-  </div>
-  </td>
-<td>
-  <div class="field">
-  <%= f.label :photo %><br />
-  <%= f.file_field :photo %>
-</div>
-  <%= image_tag("default.jpg", :alt => "rss feed") %>
-  
-  
-  </tr>
-</tbody>
-</table>
-<br><br><br>
-<div id="signupsubmit" class="actions">
+        <div class="field">
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :username %><br />
+          <%= f.text_field :username %>
+        </div>
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="field">
+          <%= f.label :date_of_birth %><br />
+          <%= f.date_select :date_of_birth, :order => [:month, :day, :year], :start_year => 1950 %>
+        </div>
+        <div class="field">
+          <%= f.label :gender %>
+          <%= f.select :gender, options_for_select(['male', 'female']), :prompt => "Select"  %><br /><br />
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.label :photo %><br />
+          <%= f.file_field :photo %>
+        </div>
+        <%= image_tag("default.jpg", :alt => "rss feed") %>
+      </td>
+      <td>
+        <div id="welcome-text">
+          <h1>
+            Welcome to Fakebook. Please register to begin.
+          </h1>
+        </div>
+        <div id="signupsubmit" class="actions">
         <%= f.submit "Submit" %>
-</div>
+      </div>
+      </td>  
+    </tr>
+  </tbody>
+</table>
+
 <% end %>

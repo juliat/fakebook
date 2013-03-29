@@ -1,6 +1,6 @@
 <!-- THIS WILL BE THE FRIENDS PAGE -->
 
-<h1>Listing friends</h1>
+<h1>My Friends</h1>
 
 <div class="people">
   <% for friend in @friends %>
@@ -8,7 +8,7 @@
     <% if friend.photo_url.nil? %>
       <img src="http://placehold.it/75x75"/>
     <% else %>
-      <%= image_tag friend.photo_url %>
+      <%= image_tag current_user.photo_url :id  => 'profilepic' %>
     <% end %>
     <div class="name"><%= link_to "#{friend.name}", user_path(friend) %></div>
   </div>

@@ -23,7 +23,7 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
-img{
+#post-photo img, #new-post-photo img, .person img{
   border-radius: 3px;
 }
 
@@ -149,10 +149,6 @@ th, td{
   vertical-align: top;
 }
 
-#delete{
-  float:right;
-}
-
 #timestamp{
   color: #999;
   font-size: 11px;
@@ -187,7 +183,6 @@ th, td{
 }
 
 #post-text > tbody > tr > th, #post-text > tbody > tr > td{
-  margin-bottom: 10px;
 }
 
 table, tbody{
@@ -225,9 +220,6 @@ table, tbody{
 }
 
 #signupsubmit.actions > input{
-  display: block;
-  margin: 0 auto;
-  height: 100px;
 }
 
 #signupform{
@@ -235,5 +227,29 @@ table, tbody{
 }
 
 #posttext p{
+  font-weight: normal;
+}
+
+td#delete{
+  float: right;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  padding-right: 0px;
+}
+
+#welcome-text{
+  vertical-align: middle;
+}
+
+#welcome-text > h1{
+  font-size: 30px;
+  line-height: 150%;
+}
+
+input#user-photo{
+  width: 100px;
+}
+
+table#post-text > tbody > tr > td{
   font-weight: normal;
 }
