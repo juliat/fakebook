@@ -37,13 +37,15 @@ git checkout master
 ```
 
 ### intermediate
+You should be at this stage at the end of the "Models Logic, Custom Views, and Testing" sessions on Saturday.
 We've added some controllers and views (HTML). To switch to this stage, enter
 ```
 git checkout intermediate
 ```
 
 ### final
-This has styling through CSS. To switch to this stage, enter
+You should end up with something close to this at the end of Saturday. We've added some basic styling through CSS.
+To switch to this stage, enter
 ```
 git checkout final
 ```
