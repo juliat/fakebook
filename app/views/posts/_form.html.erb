@@ -11,11 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
+<div id="new-post">
+  <a href="#"><div id="new-post-photo"></div></a>
+  <div id="new-post-text">
+    <div class="field">
+      <%= f.text_area :content, :placeholder => "What's on your mind?" %>
+    </div>
+    <div id="new-post-submit">
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>

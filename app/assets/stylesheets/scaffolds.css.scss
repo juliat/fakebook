@@ -1,11 +1,24 @@
+body {
+  background-color: #e9eaed;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0 auto;
+  font-weight: normal;
+  padding-top: 25px;
+}
+
 #content{
   width: 900px;
   margin: 0 auto;
 }
 
 p, ol, ul, td {
-  /* font-family: Helvetica, Arial, sans-serif; */
   font-size: 13px;
+  list-style: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
   line-height: 18px;
 }
 
@@ -66,4 +79,124 @@ div {
 th, td{
   text-align: left;
   padding-right: 20px;
+}
+
+#new-post-container{
+  margin: 40px 0 0 0 ;
+  overflow: visible;
+}
+
+#newsfeed-container{
+  float: left;
+  border-top: 1px solid #ddd;
+}
+
+#new-post-photo{
+  width: 56px;
+  height: 56px;
+  float: left;
+  background: #fff url('default_s.jpg') center no-repeat;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  vertical-align: top;
+}
+
+#new-post-text{
+  float: left;
+  height: 96px;
+  width: 550px;
+  overflow: visible;
+}
+
+#new-post-text > .field{
+  margin: 0px;
+}
+
+#new-post-text > .field > textarea{
+  width: 530px;
+  height: 36px;
+  padding: 10px;
+  font-size: 15px;
+    font-family: helvetica, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+#new-post-submit{
+  width: 100%;
+}
+
+#new-post-submit > .actions{
+  float: right;
+}
+
+#post{
+  width: 100%;
+}
+
+#post > td{
+  vertical-align: top;
+}
+
+#delete{
+  float:right;
+}
+
+#timestamp{
+  color: #999;
+  font-size: 11px;
+}
+
+#post-photo, #post-text-container, #timestamp{
+  padding-right: 0px;
+  vertical-align: top;
+}
+
+#post-text, #post-text-container{
+  width: 550px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  border-radius: 3px;
+  background: #fff;
+}
+
+#post-text{
+  padding: 10px;
+}
+
+#post-text-container{
+  border: 0px;
+  padding-bottom: 20px;
+  background: none;
+}
+
+#post-row{
+  border-spacing: 0px;
+}
+
+#post-text > tbody > tr > th, #post-text > tbody > tr > td{
+  margin-bottom: 10px;
+}
+
+table, tbody{
+  border-spacing: 0px;
+  padding-top: 40px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 15px;
+    font-family: helvetica, sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 15px;
+    font-family: helvetica, sans-serif;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 15px;
+    font-family: helvetica, sans-serif;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 15px;
+    font-family: helvetica, sans-serif;
 }

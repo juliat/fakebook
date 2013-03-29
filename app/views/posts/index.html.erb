@@ -1,25 +1,31 @@
 <!-- THIS WILL BE THE MAIN NEWSFEED -->
+<div id="new-post-container">
 
-<h1>New post</h1>
 
 <%= render 'form' %>
+</div>
 
-<h1>My Newsfeed</h1>
+<div id="newsfeed-container">
 
 <table>
-  <tr>
-    <th>Timestamp</th>
-    <th>Content</th>
-    <th></th>
-  </tr>
 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.timestamp %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr id="post-row">
+    <td id="post-photo"><a href="#"><div id="new-post-photo"></div></a></td>
+    <td id="post-text-container">
+      <table id="post-text">
+        <tr>
+          <th id="name"><%=post.user.name %></th>
+          <td id="delete"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <tr><td><%= post.content %></td></tr>
+        <tr><td id="timestamp"><%= post.timestamp %></td></tr>
+      </table>
+
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
+</div>
