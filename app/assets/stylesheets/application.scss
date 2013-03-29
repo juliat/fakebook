@@ -20,24 +20,32 @@ body{
   font-size: 13px;
   font-weight: normal;
   margin: 0 auto;
+  padding-top: 25px;
 }
 
 a{
+  color: rgb(59, 89, 152);
   cursor: pointer;
 }
 h1{
-  font-size: 20px;
+  color: #1B2A47;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
 }
 
 /* NAV BAR */
 #menu{
-  width: 100%;
   background: #3b5998;
   border-bottom: 1px solid #193783;
   height: 38px;
   overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 ul#nav {
