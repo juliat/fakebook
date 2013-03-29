@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :crypted_password, :friends, :friendships, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
+  attr_accessible :crypted_password, :friend_requests, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
   acts_as_authentic
   serialize :interests, Array
 
   # Associations
-  has_many :friend_requests
+  has_many :friend_requests, :foreign_key => "to_id"
   has_many :friendships
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
   def age
     return nil if date_of_birth.blank?
     (Time.now.to_s(:number).to_i - date_of_birth.to_time.to_s(:number).to_i)/10e9.to_i
+  end
+
+  def get_friends
+    friends + inverse_friends
   end
 
   def newsfeed

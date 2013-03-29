@@ -9,15 +9,13 @@
     <th></th>
   </tr>
 
-<% @friend_requests.each do |friend_request| %>
+<% for friend_request in @friend_requests %>
   <tr>
-    <td><%= link_to 'Show', friend_request %></td>
-    <td><%= link_to 'Edit', edit_friend_request_path(friend_request) %></td>
-    <td><%= link_to 'Destroy', friend_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to "#{friend_request.from.name}", user_path(user) %></td>
+    <td><%= link_to 'Accept', friend_request, method: :accept %></td>
+    <td><%= link_to 'Reject', friend_request, method: :reject, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Friend request', new_friend_request_path %>

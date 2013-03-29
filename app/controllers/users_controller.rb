@@ -27,6 +27,9 @@ class UsersController < ApplicationController
     
     @user = User.find(params[:id])
 
+    # Create an empty friend request
+    @friendRequest = FriendRequest.new
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

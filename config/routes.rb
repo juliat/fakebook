@@ -1,7 +1,8 @@
 Fakebook::Application.routes.draw do
-  resources :posts, :users, :user_sessions, :friend_requests
+  resources :posts, :users, :user_sessions, :friend_requests, :friendships
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+  match 'friend_requests/:id' => 'friend_requests#accept'
 
 
   # The priority is based upon order of creation:

@@ -4,14 +4,12 @@
 
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Name</th>
   </tr>
 
-<% @users.each do |user| %>
+<% for user in @users %>
   <tr>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
+    <td><%= link_to "#{user.name}", user_path(user) %></td>
   </tr>
 <% end %>
 </table>
