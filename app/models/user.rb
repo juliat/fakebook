@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # Validations
   validates_presence_of :first_name, :last_name, :date_of_birth, :username, :email
   validates_date :date_of_birth, :on_or_before => lambda { 13.years.ago }, :on_or_before_message => "must be at least 13 years old"
-  validates_inclusion_of :gender, :in => ['male', 'female']
+  validates_inclusion_of :gender, :in => ['Male', 'Female', 'male', 'female']
 
   # Other methods
   def name
