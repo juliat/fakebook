@@ -31,7 +31,7 @@ In the github for Mac/Windows apps, you can just click on "Branches" to switch b
 
 
 ### master
-You automatically start here. Models have been generated, and the database has been structured. To switch back to this stage, enter
+You should be at this stage at the end of day one. Models have been generated, and the database has been structured. To switch back to this stage, enter
 ```
 git checkout master
 ```
