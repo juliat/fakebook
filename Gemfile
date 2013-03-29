@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 gem 'validates_timeliness', '3.0.14'
-
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.

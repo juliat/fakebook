@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessible :crypted_password, :friend_requests, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
+  attr_accessible :crypted_password, :photo, :friend_requests, :password, :password_confirmation, :date_of_birth, :email, :first_name, :gender, :interests, :last_name, :password_salt, :persistence_token, :political_affiliation, :religion, :username
   acts_as_authentic
+  mount_uploader :photo, PhotoUploader
   serialize :interests, Array
 
   # Associations

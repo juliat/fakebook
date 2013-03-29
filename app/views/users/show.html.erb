@@ -2,6 +2,10 @@
 
 <p id="notice"><%= notice %></p>
 
+<% unless @user.photo_url.nil? %>
+  <p><%= image_tag @user.photo_url %></p>
+<% end %>
+
 <h1>
   <b><%=@user.first_name%> <%=@user.last_name%></b>
 </h1>

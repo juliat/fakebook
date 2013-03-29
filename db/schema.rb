@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329020005) do
+ActiveRecord::Schema.define(:version => 20130329035613) do
 
   create_table "friend_requests", :force => true do |t|
     t.integer  "from_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130329020005) do
     t.string   "religion"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.string   "photo"
   end
 
 end
