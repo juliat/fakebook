@@ -28,7 +28,7 @@
           <th id="name"><%=post.user.name %></th>
           <td id="delete"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-        <tr><td><%= post.content %></td></tr>
+        <tr><td id="posttext"><%= post.content %></td></tr>
         <tr><td id="timestamp"><%= post.timestamp %></td></tr>
       </table>
 

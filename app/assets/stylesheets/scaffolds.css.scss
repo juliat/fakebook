@@ -23,6 +23,10 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+img{
+  border-radius: 3px;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -228,4 +232,8 @@ table, tbody{
 
 #signupform{
   width: 100%;
+}
+
+#posttext p{
+  font-weight: normal;
 }
