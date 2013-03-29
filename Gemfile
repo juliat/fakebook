@@ -26,6 +26,9 @@ gem 'jquery-rails'
 # Authentication gem
 gem 'authlogic'
 
+# Better error page
+gem 'better_errors'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
