@@ -24,7 +24,7 @@
       <%= link_to 'Update Info', edit_user_path(@user) %>
     <% end %>
 
-    <% if @user != current_user %>
+    <% if (@user != current_user) and (!current_user.friends.include?(@user)) %>
       <%= render 'friend_request' %>
     <% end %>
 

@@ -36,6 +36,10 @@
     <%= f.text_field :gender %>
   </div>
   <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select(['male', 'female']), :prompt => "Select"  %><br /><br />
+  </div>
+  <div class="field">
   <%= f.label :photo %><br />
   <%= f.file_field :photo %>
 </div>
@@ -48,6 +52,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>
