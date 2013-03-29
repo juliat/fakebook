@@ -1,3 +1,29 @@
 // Place all the styles related to the friend_requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form#new_friend_request{
+  display: inline-block;
+  margin: 0;
+  height: 18px;
+  padding: 0px;
+  width: 100px;
+  text-align: center;
+
+  .field{
+    visibility: hidden;
+  }
+
+  input[type="submit"]{
+    background: none;
+    border: none;
+    color: #333333;
+    cursor: pointer;
+    outline: none;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px;
+
+  }
+}

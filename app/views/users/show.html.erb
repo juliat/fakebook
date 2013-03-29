@@ -19,15 +19,39 @@
     <%=@user.first_name%> <%=@user.last_name%> 
   </h1>
 
+  <div id="btnGroup">
+    <% if @user == current_user %>
+      <%= link_to 'Update Info', edit_user_path(@user) %>
+    <% end %>
+
+    <% if @user != current_user %>
+      <%= render 'friend_request' %>
+    <% end %>
+
+    <!-- Why is there a back button again? 
+    <%= link_to 'Back', users_path %>
+    -->
+  </div>
+
   <!-- Columns -->
   <ul class="col">
-
-  <ul>
+    <li> <label>Username</label>
+      <%= @user.username %></li>
+    <li> <label>Email</label> 
+      <a href="mailto:<%= @user.email %>"><%= @user.email %></a> </li>
+    <li> <label>Birthday </label>
+      <%= @user.date_of_birth %></li>
+  </ul>
   <ul class="col">
-  
+    <li> <label>Gender</label>
+      <%= @user.gender %></li>
+    <li> <label>Politics</label>
+      <%= @user.political_affiliation %> </li>
+    <li> <label>Religion </label>
+      <%= @user.religion %></li>
   </ul>
   <ul class="col" id="interests">
-  
+    <li> <strong> Interests</li> <br/><%= @user.interests %> </li>
   </ul>
 
 </header>
@@ -84,14 +108,3 @@
 </p>
 
 -->
-
-<% if @user == current_user %>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-<% end %>
-
-<% if @user != current_user %>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= render 'friend_request' %>
-<% end %>
-
-<%= link_to 'Back', users_path %>

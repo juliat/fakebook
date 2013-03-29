@@ -1,4 +1,11 @@
-<%= form_for(@friendRequest) do |f| %>
+<%= form_for(@friendRequest) do |f|  %>
+
+  <%= f.submit "Add Friend" %>
+  <!--
+  <div class="actions">
+    <%= f.submit %>
+  </div>-->
+
   <% if @friendRequest.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@friendRequest.errors.count, "error") %> prohibited this friendRequest from being saved:</h2>
@@ -15,7 +22,5 @@
     <%= f.label :to %><br />
     <%= f.text_field :to, :value => @user.id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
 <% end %>
