@@ -12,62 +12,87 @@
  *= require_tree .
  */
 
- #menu{
- 	width: 100%;
- 	background: #3b5998;
- 	height: 44px;
- }
+/* DEFAULTS */
 
- ul#nav {
- 	list-style: none;
- 	padding: 0;
- 	width: 70%;
- 	margin: 0 auto;
+body{
+  background-color: #E7EBF2;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0 auto;
+}
 
- 	li {
- 		float: right;
- 		padding-top: 8px;
+a{
+  cursor: pointer;
+}
+h1{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
 
- 		a {
- 			padding: 16px 8px;
- 			line-height: 25px;
- 			text-decoration: none;
- 			color: #e7ebf2;
- 			font-weight: normal;
+/* NAV BAR */
+#menu{
+  width: 100%;
+  background: #3b5998;
+  border-bottom: 1px solid #193783;
+  height: 38px;
+  overflow: hidden;
+}
 
- 			&:hover {
- 				background: #4b67a1;
- 				color: #fff;
- 			}
- 		}
- 	}
- }
+ul#nav {
+	list-style: none;
+	padding: 0;
+	width: 900px;
+	margin: 0 auto;
 
- #new_user a{
- 	float: right;
- 	padding: 9px 8px;
- 	line-height: 25px;
- 	text-decoration: none;
- 	color: #e7ebf2;
- 	font-weight: normal;
+	li {
+		float: right;
+		padding-top: 8px;
 
- 	&:hover{
- 		background: #4b67a1;
- 		color: #fff;
- 	}
- }
+		a {
+			padding: 16px 8px;
+			line-height: 25px;
+			text-decoration: none;
+			color: #e7ebf2;
+			font-weight: normal;
 
- #logo{
- 	float: left;
- 	height: 44px;
- 	width: 121px;
- 	background: #3b5998 url('logo.png') center no-repeat;
- 	margin-left: -6px;
- }
+    font-size: 12px;
+    font-weight: bold;
+
+			&:hover {
+				background: #4b67a1;
+				color: #fff;
+			}
+		}
+	}
+}
+
+#new_user a{
+	float: right;
+	padding: 9px 8px;
+	line-height: 25px;
+	text-decoration: none;
+	color: #e7ebf2;
+	font-weight: normal;
+
+	&:hover{
+		background: #4b67a1;
+		color: #fff;
+	}
+}
+
+#logo{
+	float: left;
+	height: 44px;
+	width: 121px;
+	background: #3b5998 url('logo.png') center no-repeat;
+	margin-left: -6px;
+}
 
 #logo:hover{
-	background: #4b67a1 url('logo.png') center no-repeat;
+background: #4b67a1 url('logo.png') center no-repeat;
 }
- .clear {
- 	clear: both;
- }
+.clear {
+	clear: both;
+}
