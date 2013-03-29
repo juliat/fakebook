@@ -10,10 +10,9 @@
       </ul>
     </div>
   <% end %>
-<table id="signupform">
-  <tbody>
-    <tr id="signup">
-      <td class="signupinfo">
+<div id="signupform">
+
+      <div class="signupinfo">
         <div class="field">
           <%= f.label :first_name %><br />
           <%= f.text_field :first_name %>
@@ -46,26 +45,32 @@
           <%= f.label :gender %>
           <%= f.select :gender, options_for_select(['Male', 'Female']), :prompt => "Select"  %><br /><br />
         </div>
-      </td>
-      <td class="photo-upload">
+        <div id="signupsubmit" class="actions">
+        <%= f.submit "Submit" %>
+        </div>
+      </div>
+
+      <div class="photo-upload">
         <div class="field">
           <%= f.label :photo %><br />
           <%= f.file_field :photo %>
         </div>
         <%= image_tag("default.jpg", :alt => "rss feed") %>
-      </td>
-      <td>
+      </div>
+
+      <div class="welcome-div">
         <div id="welcome-text">
           <h1>
             Welcome to Fakebook. Please register to begin.
           </h1>
         </div>
-        <div id="signupsubmit" class="actions">
-        <%= f.submit "Submit" %>
-      </div>
-      </td>  
-    </tr>
-  </tbody>
-</table>
+        <a href="/login">
+          <div id="login-button">
+          <p>Login</p>
+          </div>
+        </a>
+      </div>  
+
+</div>
 
 <% end %>

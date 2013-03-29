@@ -17,7 +17,7 @@
       <% if current_user.photo_url.nil? %>
         <img src="http://placehold.it/56x56"/>
       <% else %>
-        <%= image_tag current_user.photo_url :id  => 'profilepic' %>
+        <%= image_tag current_user.photo_url %>
       <% end %>
     </div>
   </a>
