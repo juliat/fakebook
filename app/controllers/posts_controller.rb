@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     end
 
     # Fetch user's newsfeed
-    @posts = Post.all
+    @posts = current_user.newsfeed
 
     # Create an empty post
     @newPost = Post.new

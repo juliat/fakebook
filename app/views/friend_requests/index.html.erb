@@ -11,7 +11,7 @@
 
 <% for friend_request in @friend_requests %>
   <tr>
-    <td><%= link_to "#{friend_request.from.name}", user_path(user) %></td>
+    <td><%= link_to "#{friend_request.from.name}", user_path(friend_request.from) %></td>
     <td><%= link_to 'Accept', friend_request, method: :accept %></td>
     <td><%= link_to 'Reject', friend_request, method: :reject, data: { confirm: 'Are you sure?' } %></td>
   </tr>

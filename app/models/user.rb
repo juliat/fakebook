@@ -32,8 +32,15 @@ class User < ActiveRecord::Base
   end
 
   def newsfeed
-    feed = []
-    # to be continued
+    postsArray = []
+    friendsArray = get_friends
+
+    for friend in friendsArray
+      postsArray = friend.posts
+    end
+
+    # Sort the posts
+    postsArray.sort_by! {|p| p.timestamp }
   end
 
 end
