@@ -17,7 +17,13 @@
     <%= link_to "Logout", :logout%>
   </li>
   <li>
-    <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
+    <%= link_to "My Profile", user_path(current_user.id) %>
+  </li>
+  <li>
+    <%= link_to "Friend Requests", friend_requests_path %>
+  </li>
+  <li>
+    <%= link_to "People", users_path %>
   </li>
   <% else %>
   <li>
